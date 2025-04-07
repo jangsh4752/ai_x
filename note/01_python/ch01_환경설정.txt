@@ -1,1 +1,25 @@
-집가서 채워넣을 공간
+<gitignore 등록 시 주의사항>
+gitignore에 폴더 등록 시 폴더명 뒤에 '/' 반드시 입력
+파일 등록 시에는 '/' 없이 등록
+
+<git_commit 진행>
+cmd에서 진행
+1. git init(초기화)
+2. git add . (폴더 내 모든 파일 등록)
+3. git commit -m "버전 이름"
+4. git branch -M main(branch 생성 / branch 생성 하지 않을 경우 master로)
+5. git remote add origin 본인 깃 주소(연결고리) -> git remote -v(확인) => 선택사항
+6. git push -u origin main(branch에 올리기 / branch를 생성하지 않았다면 master로)
+
+<생성된 레포지토리에 데이터 공유>
+* 내 pc와 git 동기화 후 추가 파일 만든 후 수정
+1. git add .
+2. git commit -m "버전 이름" (이전 버전과 다르게)
+3. git push -u origin main
+
+<다른 pc에서 git 협업 세팅>
+git clone 'git 주소' '폴더 이름' (다른 pc에 'git 주소'의 내용을 '폴더 이름'으로 복사)
+cd 폴더 경로 (예 - cd C:\ai_x)
+git pull origin main (git 저장소와 현재 pc간 동기화)
+
+* 수정 이후 상단의 '데이터 공유' 진행 (단, 마지막 push는 git push origin main으로 진행 / '-u' 제외)
