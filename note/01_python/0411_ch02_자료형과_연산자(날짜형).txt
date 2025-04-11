@@ -1,0 +1,9 @@
+7절 날짜시간
+	특정시점 : datetime(년, 월, 일, 시, 분, 초)
+	지금시점 : datetime.now()
+	date(년, 월, 일) / datetime.now().date()
+	time(시, 분, 초) / datetime.now().time()
+
+datetime, date, time 형들을 원하는 포맷의 문자형으로 반환 : strftime()
+
+%Y, %y, %M, %m, %d, %A(요일), %p(오전/오후), %H(24시), %I(12시), %S(초)
