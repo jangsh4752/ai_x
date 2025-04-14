@@ -1,0 +1,8 @@
+1절. 리스트 :  lst = [타입과 관련없이 0개 이상의 데이터들]
+	len(lst) : 데이터 개수
+	min(lst), max(lst), sum(lst) : 최소, 최대, 합
+	data in lst : lst안에 data 요소가 있는지 여부(있으면 True, 없으면 False)
+	lst[idx], lst[from:stop:step] : 인덱싱과 슬라이싱
+	추가 :  lst..append(value), lst.insert(idx, value)
+	삭제 : lst.pop(), lst.pop(idx), lst.remove(data)
+	찾기 : lst.index(data) - 없으면 오류, lst.count(data) - data가 몇 개 있는지
