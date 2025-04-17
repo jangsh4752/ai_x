@@ -15,4 +15,13 @@
 
     * 함수 정의 시 매개변수 순서 *
 	순서인수 > 튜플인수 > 키워드인수 > 딕셔너리인수
-4절. 람다식
+4절. 람다식(익명함수)
+	funcname = lambda 매개변수(들) : 리턴값
+	funcname(매개변수(들))
+	(lambda 매개변수(들) : 리턴값)(매개변수(들))
+      용도 : (1) 함수의 매개변수 / (2) 함수의 return값
+	ex1. map(func, 가공할 vector)
+	ex2. filter(func, 추출할 vector)
+	ex3. sort(key=소트될 데이터를 return할 함수, reverse=T/F)
+
+5절. python 내장 함수
