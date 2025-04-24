@@ -1,0 +1,25 @@
+Numpy 패키지 함수와 속성
+- 배열속성
+   dtype : 요소들의 type
+   itemsize : 한 item(요소)의 bytesize
+   ndim : 차원 수 (축 수)
+   size : 배열 요소 개수
+   shape : 배열 구조(튜플)  
+- 배열 생성 함수
+   np.array(obj, dtype, copy=T)
+   np.array(obj, dtype, copy=T).reshape(구조)
+   np.ones(tup, dtype)
+   np.zeros(tup, dtype)
+   np.full(tup, 초기화)
+   np.empty(tup, dtype)
+   np.random.random(tup) : 0부터 1미만 균등분포를 갖는 난수 배열 (기본:실수)
+   np.random.uniform(low=0, high=1.0, tup) : low부터 high미만 균등분포를 갖는 난수 배열 (기본:실수)
+   np.random.normal(loc=0, scale=1.0, size=tup) : 평균loc, 표준편차scale의 정규분포를 갖는 난수 배열
+   np.random.rand(n) : 균등분포의 1차원 난수 배열 (난수 n개)
+   np.random.randn(n) : 표준정규분포(평균 0, 표준편차 1인 정규분포)의 1차원 난수 배열 (난수 n개)
+   np.linspace(from, to, count, dtype) : from부터 to까지 count개 1차원 배열
+   np.arange(from, stop, step) : from 부터 stop 앞까지 step씩 증감한 정수값을 배열로 생성
+
+- 배열 차원 변경
+  .reshape(x, y) : x행 y열로 변경(3차원 : x, y, z)
+  .ravel(), flatten() : 1차원 변경
