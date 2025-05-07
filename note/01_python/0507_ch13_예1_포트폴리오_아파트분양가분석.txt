@@ -1,0 +1,30 @@
+# ch13 HTML에서 사용된 Python 함수 문법 요약 (간결 정리)
+
+## DataFrame.apply
+- 형식: df.apply(함수, axis=0 또는 1)
+## Series.astype
+- 형식: df['열'].astype(int 또는 str 등)
+## seaborn.barplot
+- 형식: sns.barplot(x=컬럼1, y=컬럼2, data=데이터프레임)
+## seaborn.boxplot
+- 형식: sns.boxplot(x=컬럼, y=컬럼, data=데이터프레임)
+## pandas.groupby
+- 형식: df.groupby(그룹기준)[계산대상열].mean()
+## Series/DataFrame.isnull
+- 형식: df.isnull() → 결측치 여부 반환
+## seaborn.lineplot
+- 형식: sns.lineplot(x=컬럼, y=컬럼, data=데이터프레임)
+## Series.map
+- 형식: df['열'].map(딕셔너리 또는 함수)
+## Series/DataFrame.notnull
+- 형식: df.notnull() → 결측치 아님 여부 반환
+## pandas.pivot_table
+- 형식: df.pivot_table(index=열1, columns=열2, values=값열, aggfunc='mean')
+## DataFrame.reset_index
+- 형식: df.reset_index(drop=True)
+## DataFrame.set_index
+- 형식: df.set_index('열이름')
+## DataFrame.sort_values
+- 형식: df.sort_values(by='열', ascending=True)
+## Series.value_counts
+- 형식: df['열'].value_counts()
