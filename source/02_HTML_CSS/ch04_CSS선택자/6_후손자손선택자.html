@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width:600px; margin:0 auto; /* wrap을 가운데 정렬 */
+            border:1px solid #999999;
+        }
+        #wrap > #header { /* > : 자손선택자 */
+            overflow:hidden; /* 수평으로 하고 싶은 태그 부모단*/
+        }
+        #wrap .logo { /* space : 후손선택자 */
+            float:left;
+            padding:10px 30px 10px 150px;
+        }
+        #wrap .title {
+            float:left;
+            padding:20px 150px 10px 30px;
+        }
+        div p{ /* 후손선택자 (자손선택자 포함) */
+            font-size:24px;
+        }
+        div > p { /* 자손선택자 */
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="title"><h2>00주식회사</h2></div>
+        </div>
+        <div id="content">
+            <p>
+                법관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다.
+
+                교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. 대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다.
+            </p>
+            <ul>
+                <li><p>여기 content밑에 ul밑에 li밑에 p</p></li>
+                <li><p>여기 content밑에 ul밑에 li밑에 p</p></li>
+                <li><p>여기 content밑에 ul밑에 li밑에 p</p></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>주소</p>
+        </div>
+    </div>
+</body>
+</html>
