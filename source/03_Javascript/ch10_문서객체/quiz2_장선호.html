@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>quiz2. 메뉴</title>
+    <style>
+        div {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        h2 {
+            margin: 20px 0 10px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        var sites = {
+            naver: 'http://www.naver.com',
+            daum: 'http://www.daum.net',
+            google: 'http://www.google.com',
+            youtube: 'http://www.youtube.com'
+        };
+        var url = [
+             'http://www.naver.com',
+            'http://www.daum.net',
+             'http://www.google.com',
+             'http://www.youtube.com'];
+        function locationPage(btn) {
+            location.href = sites[btn];
+            // var siteName = btn.name;
+            // if (sites[siteName]) {
+            //     location.href = sites[siteName];
+            // } else {
+            //     alert('해당 사이트 주소가 없습니다.');
+            // }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>quiz2. 메뉴</h2>
+        <button onclick="locationPage('naver')" name="naver">네이버</button>
+        <button onclick="locationPage('daum')" name="daum">다음</button>
+        <button onclick="locationPage(2)" name="google">구글</button>
+        <button onclick="locationPage(3)" name="youtube">유튜브</button>
+    </div>
+</body>
+</html>
