@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>quiz2. 메뉴</title>
+    <style>
+        div {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        h2 {
+            margin: 20px 0 10px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        const url = [
+            'http://www.naver.com',
+            'http://www.daum.net',
+            'http://www.google.com',
+            'http://www.youtube.com'];
+        // function locationPage(btn) {
+        //     location.href = url[btn];
+        // }
+        window.addEventListener('load', () => {
+            const btns = document.getElementsByTagName('button');
+            for(let idx=0; idx < btns.length; idx++){
+                btns[idx].addEventListener('click', function(){
+                    location.href = url[idx];
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h2>quiz4. 메뉴</h2>
+        <button name="naver">네이버</button>
+        <button name="daum">다음</button>
+        <button name="google">구글</button>
+        <button name="youtube">유튜브</button>
+    </div>
+</body>
+</html>
