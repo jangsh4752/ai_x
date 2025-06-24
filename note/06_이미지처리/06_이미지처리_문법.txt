@@ -1,0 +1,31 @@
+📌 [06_이미지처리 - 주요 문법 요약]
+
+■ 데이터 로딩 및 전처리
+  - astype
+  - to_categorical
+
+■ 모델 구성
+  - Conv2D
+  - Dense
+  - Dropout
+  - Flatten
+  - Input
+  - Sequential
+
+■ 컴파일/학습
+  - model.compile
+  - model.evaluate
+  - model.fit
+
+■ 예측 및 평가
+  - confusion_matrix
+  - model.predict
+  - argmax
+
+■ 시각화
+  - adjust
+  - imshow
+  - matplotlib
+  - plt
+  - subplots
+

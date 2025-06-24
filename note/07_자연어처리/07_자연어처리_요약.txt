@@ -1,0 +1,41 @@
+📌 [07_자연어처리 - 주요 문법 요약]
+
+■ 형태소 분석
+  - Hannanum
+  - Kkma
+  - Komoran
+  - Okt
+
+■ 데이터 처리
+  - fillna
+  - groupby
+  - pandas
+  - read_csv
+  - to_csv
+  - value_counts
+
+■ 시각화
+  - imshow
+  - matplotlib
+  - plot
+  - plt
+  - subplots
+
+■ 모델 구성/학습
+  - Dense
+  - Embedding
+  - LSTM
+  - Sequential
+  - SimpleRNN
+  - compile
+  - evaluate
+  - fit
+
+■ 예측 및 평가
+  - confusion_matrix
+  - np.argmax
+  - predict
+
+■ 시계열 분석
+  - seasonal_decompose
+
