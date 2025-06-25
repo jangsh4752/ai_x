@@ -1,0 +1,17 @@
+📌 [08_LLM - 주요 문법 요약]
+
+■ 허깅페이스 사용
+  - transformers
+  - pipeline
+
+■ 추론 및 분석
+  - mask
+  - model
+  - summarization
+  - tokenizer
+  - translation
+  - zero-shot
+
+■ 이미지 처리
+  - Image.open
+
