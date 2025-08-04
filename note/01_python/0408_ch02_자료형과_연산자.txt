@@ -1,0 +1,28 @@
+<jupyter에서 내가 원하는 경로로 source file 생성하도록 설정하는 법>
+
+1. jupyter notebook 우클릭 - 속성
+2. 대상 경로내에서 "" 사이에 원하는 파일의 경로 입력 후 확인
+
+<jupyter notebook 설정>
+1. Nbextebsions 클릭 후 "disable configuration for ~" 체크 해제
+2. 하단의 "Table of Contents"체크
+3. 하단의 "Automatically number notebook's sections" 체크 해제
+
+print에서 값을 출력할때 ("문자열" + 변수) 가 아닌 (문자열, 변수)로 입력
+맨 마지막 줄에서 출력 시 print 함수 이용 안해도 됨
+
+1절 변수
+	변수 = 값 의 형태로 변수에 값 하나가 있는 데이터 : 스칼라 데이터
+	선언이 필요없고 할당과 동시에 타입이 셋팅
+	문자, 숫자, _로 변수명작성/숫자로 시작하거나 예약어는 사용불가
+	다중 변수할당시 일괄 할당
+	ex. a, b = 10, 20
+2절 화면 i/o(입출력)
+	input()은 입력된 값을 문자로 반환
+	print(출력 내용, sep=' ', end='\n') - seq, end는 default값(생략 가능)
+3절 기본 자료형
+	숫자형 : int, float, complex(복소수)
+		int값/int값=>실수
+		지수형 표현(큰수, 작은수)은 => 실수
+	문자형 : str
+		문자열 연산 : +(연결) *(반복)

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수 비교 결과</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+        }
+        table {
+            margin: 0 auto;
+            border: 1px solid #cfcfcf;
+            padding: 30px;
+        }
+        td {
+            padding: 10px;
+            font-size: 20px;
+        }
+        input {
+            font-size: 20px;
+            padding: 5px;
+            text-align: center;
+        }
+        .button {
+            font-size: 20px;
+            padding: 10px 30px;
+            margin-top: 10px;
+            border: none;
+            font-weight: bold;
+        }
+        #result {
+            font-size: 30px;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        function showResult() {
+            let a = parseInt(document.getElementById("num1").value);
+            let b = parseInt(document.getElementById("num2").value);
+            let resultText = "";
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("정확한 수를 입력해주세요.");
+                return;
+            }
+
+            if (a === b) {
+                resultText = "두 수는 같습니다.";
+                alert(resultText);
+            } else if (a > b) {
+                resultText = "첫번째 수가 " + (a - b) + " 큽니다";
+                alert("첫번째 수가 " + (a - b) + "만큼 더 크다");
+            } else {
+                resultText = "두번째 수가 " + (b - a) + " 큽니다";
+                alert("두번째 수가 " + (b - a) + "만큼 더 크다");
+            }
+
+            document.getElementById("result").innerText = resultText;
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return showResult()">
+        <table>
+            <tr>
+                <td>첫번째 수</td>
+                <td><input type="text" id="num1"></td>
+            </tr>
+            <tr>
+                <td>두번째 수</td>
+                <td><input type="text" id="num2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="button">
+                </td>
+            </tr>
+        </table>
+    </form> 
+    <div id="result"></div>
+
+
+</body>
+</html>

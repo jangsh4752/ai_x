@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        let person = {
+            name:'이순신', // 속성 변수
+            age:20, 
+            eat: function(food){ // 메소드 내에서는 self 대신 this, 화살표 함수 불가
+                var msg = this.age + '살' + this.name + '님은' + food + '을(를) 먹는다';
+                alert(msg);
+            }, // eat 함수
+            toString : function(){ // python 에서의 __str__ 역할
+                let output = ''; // toString함수가 return 할 문자
+                for(let key in this) {
+                    if(key != 'eat' && key != 'toString'){
+                        // output = output + key + ':' + this[key] + '<br>';
+                        output += key + ':' + this[key] + '<br>';
+                    } // if
+                } // for
+                return output;
+            },
+        };    // person 객체
+        document.write(person);
+        alert(person.toString().replaceAll('<br>','\n'));
+        person.address = '서울시';
+        person.hobby = '열공';
+        document.write(person);
+        alert(person.toString().replaceAll('<br>','\n'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+1절. txt파일에 데이터 저장하고 불러오기
+# mode : 'r' 또는 'rt' : text 읽기 모드
+#        'rb' : 바이너리 읽기 모드
+#        'w' 또는 'wt' : text 쓰기 모드(파일이 있으면 덮어씀, 없으면 파일 생성) 
+#        'wb' : 바이너리 쓰기 모드
+#        'a' 또는 'ap' : text 추가 모드(파일이 있으면 append, 없으면 파일 생성)
+#        읽기모드에서 파일이 없으면 예외 / 쓰기모드에서 폴더가 없으면 예외
+# encoding
+    # euc-kr (한글완성형) 믜 x
+    # cp949 (확장된 한글완성형) : open()함수 기본 encoding방식(windows)
+    # utf-8 (한글조합형) : open()함수 기본 encoding방식(mac, linux)
+	# 한 줄씩 읽기 readline()
+	# 모든 줄을 읽기 readlines()
+	# 모두 읽기 read()
+
+2절. 피클을 이용한 객체 저장 및 불러오기
+	2.1 형식이 있는 txt 데이터 불러오기
+	2.2 피클링
+		객체 리스트(user_list) -> 피클파일로 쓰기
+		피클 파일을 읽기 -> 객체 리스트(load_user_list)
+
+	# 피클링을 이용한 객체를 저장하기
+	import pickle
+	with open('data/ch09_member.data', 'wb') as f :
+    	pickle.dump(user_list, f)
+
+	# 피클링을 이용한 파일에서 객체 데이터로 읽기
+	with open('data/ch09_member.data', 'rb') as f :
+    	load_user_list = pickle.load(f)
+
+3절. csv형식 파일 읽기/쓰기
+csv파일 <-> 리스트데이터 3.1(읽기) / 3.2(쓰기)
+csv파일 <-> 딕셔너리데이터 3.3(읽기) / 3.4(쓰기)
+	3.1 reader
+		reader = csv.reader(f) # csv파일에서 한 줄씩 읽어온 내용을 list로 저장
+		# ""(따옴표)가 없는 데이터는 numeric으로
+		import csv
+		with open('data/ch09_member1.csv', 'r', encoding='utf-8') as f :
+   			reader = csv.reader(f, 
+                        				quoting=csv.QUOTE_NONNUMERIC) # csv파일에서 한 줄씩 읽어온 내용을 list로 저장		
+	
+	3.2 writer		
+		with open('data/ch09_member1_write.csv', 'a', newline='', encoding='utf-8') as f :
+   			writer = csv.writer(f)
+    			writer.writerows(user_list) # 한 줄 쓸거면 row, 여러 줄 쓸거면 rows
+	
+	3.3 DictReader (csv 파일을 딕셔너리로)
+		with open('data/ch09_member3.csv', 'r', encoding='utf-8') as f :
+    			dict_reader = csv.DictReader(f)
+
+		csv.DictReader
+	딕셔너리 리스트 -> csv파일
+
+	#csv <-> 데이터프레임
+		import pandas as pd
+		member = pd.read_csv('data/ch09_member3.csv') # 기본 encoding : utf-8 / 헤더 보유
+		member
+
+4절. JSON 데이터 저장 및 불러오기(dump, load)
+	딕셔너리리스트 <-> JSON파일(기본)
+	객체리스트 <-> JSON파일
+	
+	4.1 dump(파일 출력)
+	# ensure_ascii 매개변수 
+    	# True : 비ASCII문은 유니코드 형태로 저장
+    	# False : 비 ASCII문자 원래 형태로 저장
+	.as_dict # 객체를 딕셔너리로 return 하는 인스턴스 함수
+	
+	4.2 load(파일 입력)
+		json 파일 -> 딕셔너리리스트 (기본)
+         				 ↓
+		json 파일 -> 객체리스트
+
+	JSON -> 데이터프레임
+	import pandas as pd
+	pd.read_json('data/ch09_member1.json') 
+	# pd.함수() : encoding='utf-8' 기본값
+	# open(파일, 모드)함수 : encoding='cp949' 기본값
+
+
+
+
+

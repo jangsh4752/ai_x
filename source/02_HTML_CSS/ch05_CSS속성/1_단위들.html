@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {
+            width:600px; margin:0 auto;
+            border:1px solid gray;
+            text-align:justify;
+            padding:10px;
+        }
+        #wrap p:nth-child(2n){background-color:lightblue;}
+        /* em(원 글씨크기 대비 배율), %(글씨크기 및 width, height,... ), px, pt(3pt가 4px)
+        pxtoem(https://www.pxtoem.com.au/)
+        pxtopt(https://pixelsconverter.com/px-to-pt)
+        */
+        #wrap p > span{
+            display:block; /* display 속성을 block으로 수정하면 block형 태그로 전환 */
+            color:gray;
+            font-size:.5em;
+        }
+        #wrap p:nth-child(1) {
+            font-size: .8em; /* 원래 사이즈의 0,8배*/
+        }
+        #wrap p:nth-child(2){
+            font-size: 100%; /* 문자의 경우 원래 사이즈의 몇 % */
+            /* width, height, padding, margin.. 등 길이의 경우 : 부모 길이의 몇 % */
+        }
+        #wrap p:nth-child(3) {
+           font-size: 32px; /* p태그 기본 사이즈가 16px */
+        }
+        #wrap p:nth-child(4) {
+            font-size:24pt; /* 3pt(글씨 포인트 단위)가 4px */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 대통령은 제1항과 제2항의 처분 또는 명령을 한 때에는 지체없이 국회에 보고하여 그 승인을 얻어야 한다.
+            <span>입력 2025.05.14. 오전 9:46</span>
+        </p>
+        <p>
+            법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 대통령은 제1항과 제2항의 처분 또는 명령을 한 때에는 지체없이 국회에 보고하여 그 승인을 얻어야 한다.
+            <span>입력 2025.05.14. 오전 9:46</span>
+        </p>
+        <p>
+            법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 대통령은 제1항과 제2항의 처분 또는 명령을 한 때에는 지체없이 국회에 보고하여 그 승인을 얻어야 한다.
+            <span>입력 2025.05.14. 오전 9:46</span>
+        </p>
+        <p>
+            법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 대통령은 제1항과 제2항의 처분 또는 명령을 한 때에는 지체없이 국회에 보고하여 그 승인을 얻어야 한다.
+            <span>입력 2025.05.14. 오전 9:46</span>
+        </p>
+    </div>
+</body>
+</html>

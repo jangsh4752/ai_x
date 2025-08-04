@@ -1,0 +1,28 @@
+1절. 리스트 : lst = [타입과 관련없는 0개 이상의 데이터들]
+	len(lst) : 요수 갯수
+	min(lst), max(lst), sum(lst), sorted(lst, reverse=True) : 최소, 최대, 합, 정렬
+	data in lst : lst안의 data 요소가 있는지 여부
+	lst[idx], lst[from:stop:step] 인덱싱과 슬라이싱
+	추가 : lst.append(value), lst.insert(idx, value)
+	삭제 : lst.pop(), lst.pop(idx), lst.remove(data), lst.extend(another_list)
+	찾기 : lst.index(data), lst.count(data)
+	정렬 : lst.sort(reverse=True)
+	역순 : lst.reverse()
+2절.  튜플 : tup = (data, ) 수정 불가
+	len(tup) : 요수 갯수
+	min(tup), max(tup), sum(tup), sorted(tup, reverse=True) : 최소, 최대, 합, 정렬
+	data in tup : tup안의 data 요소가 있는지 여부
+	tup[idx], tup[from:stop:step] 인덱싱과 슬라이싱
+	찾기 : tup.index(data), tup.count(data)
+3절. 딕셔너리 dic = {key1:value1, key2:value2, ...}
+	읽기 : dic[key1], dic.get(key1)
+	수정 : dic[key1] = 수정할 데이터
+	제거 : del dic[key1], dic.pop(key1)
+	추가 : dic[key9] = value9
+	dic.keys() : 키 만 가져옴 / dic.values() : 값만 가져옴 / dic.items() : 키, 값 모두 가져옴
+4절. 셋 s = {data1, data2, data1} : 중복 허용 안함, 순서 없음 => {data1, data2}
+	추가 : add(스칼라 데이터), update(데이터 구조)
+	제거 : remove(제거할 데이터)
+	연산 : &(교집합), |(합집합), -(차집합=여집합)
+데이터 구조를 for문을 이용하여 출력할 경우 enumerate 사용
+	
